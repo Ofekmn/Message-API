@@ -24,5 +24,5 @@ urlpatterns = [
     path(f'{base_url}', views.getMessages),
     path(f'{base_url}write/', views.writeMessage),
     path(f'{base_url}<int:id>', views.specificMessage),
-    path(f'{base_url}unread', views.unreadMessages)
+    path(f'{base_url}unread/', views.unreadMessages)
 ]
