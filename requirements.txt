@@ -1,2 +1,5 @@
-venv\Scripts\activate
+pip install virtualenv
+virtualenv env
+source virtualenv_name/bin/activate
 python manage.py migrate
+
