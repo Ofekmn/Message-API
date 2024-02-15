@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from message import views
+base_url = "messages/"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(f'{base_url}', views.getMessages),
+    path(f'{base_url}write/', views.writeMessage),
+    path(f'{base_url}<int:id>', views.specificMessage),
+    path(f'{base_url}unread', views.unreadMessages)
 ]
